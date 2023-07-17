@@ -11,10 +11,10 @@ export const PageWelcome = () => {
 		<h2>Bedarfsrechner</h2>
 		<form action="">
 		  <label for="stadt">Stadt</label>
-		  <select name="stadt" id="stadtSelect">
+		  <select name="stadt" id="stadt">
 			${cities.map((city) => {
 				return `<option value="${city.name}">${city.name}</option>`;
-			})}
+			}).join('')}
 		  </select>
 		  <!-- <h2 id="waren1">0</h2>
 		  <input type="number">
@@ -32,27 +32,22 @@ export const PageWelcome = () => {
 };
 
 export const attachPageWelcomeEvents = () => {
-	// const selectElement = document.getElementById(
-	// 	"stadtSelect"
-	// ) as HTMLSelectElement;
-	// const waren1Element = document.getElementById("waren1") as HTMLHeadingElement;
-	// const waren2Element = document.getElementById("waren2") as HTMLHeadingElement;
-	// const waren3Element = document.getElementById("waren3") as HTMLHeadingElement;
-	// const waren4Element = document.getElementById("waren4") as HTMLHeadingElement;
-	// const waren5Element = document.getElementById("waren5") as HTMLHeadingElement;
+	const stadtElem = document.getElementById("stadt") as HTMLSelectElement;
 
-	// // Event-Listener für die Auswahl der Stadt
-	// selectElement.addEventListener("change", () => {
-	// 	const selectedCity = cities.find(
-	// 		(city) => city.name === selectElement.value
-	// 	);
+	stadtElem.addEventListener("change", () => {
 
-	// 	if (selectedCity) {
-	// 		waren1Element.textContent = selectedCity.waren[0];
-	// 		waren2Element.textContent = selectedCity.waren[1];
-	// 		waren3Element.textContent = selectedCity.waren[2];
-	// 		waren4Element.textContent = selectedCity.waren[3];
-	// 		waren5Element.textContent = selectedCity.waren[4];
-	// 	}
-	// });
+		const city = stadtElem.value;
+		alert(city)
+		// const selectedCity = cities.find(
+		// 	(city) => city.name === selectElement.value
+		// );
+
+		// if (selectedCity) {
+		// 	waren1Element.textContent = selectedCity.waren[0];
+		// 	waren2Element.textContent = selectedCity.waren[1];
+		// 	waren3Element.textContent = selectedCity.waren[2];
+		// 	waren4Element.textContent = selectedCity.waren[3];
+		// 	waren5Element.textContent = selectedCity.waren[4];
+		// }
+	});
 };

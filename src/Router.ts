@@ -51,6 +51,7 @@ function getSmartCurrentPageId() {
 	currentPageIdCode = currentPageIdCode === '' ? tools.cleanCharactersToAscii(pageNames[0].toLowerCase()) : currentPageIdCode;
 	return currentPageIdCode;
 }
+
 export const attachEvents = () => {
 	attachPageWelcomeEvents();
 	attachPageInfoEvents();
