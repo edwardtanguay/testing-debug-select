@@ -1,0 +1,22 @@
+[
+     {
+        "name":"Boston",
+        "region":"England",
+        "waren":["Ziegel","Getreide","Salz","Met","Tuch"]
+     },
+     {
+        "name":"Edinburgh",
+        "region":"England",
+        "waren":["Holz","Hanf","Rohes Metall","Met","Tuch"]
+     },
+     {
+        "name":"London",
+        "region":"England",
+        "waren":["Ziegel","Getreide","Wolle","Metallwaren","Tuch"]
+     },
+     {
+        "name":"Scarbarough",
+        "region":"England",
+        "waren":["Holz","Hanf","Rohes Metall","Kleidung","Tuch"]
+     }
+]
