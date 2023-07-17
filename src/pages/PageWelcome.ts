@@ -16,7 +16,7 @@ export const PageWelcome = () => {
 				return `<option value="${city.name}">${city.name}</option>`;
 			}).join('')}
 		  </select>
-		  <!-- <h2 id="waren1">0</h2>
+		  <h2 id="waren1">0</h2>
 		  <input type="number">
 		  <h2 id="waren2">0</h2>
 		  <input type="number">
@@ -24,7 +24,7 @@ export const PageWelcome = () => {
 		  <input type="number">
 		  <h2 id="waren4">0</h2>
 		  <input type="number">
-		  <h2 id="waren5">0</h2> -->
+		  <h2 id="waren5">0</h2>
 		</form>
 	  </section>
 	</div>
@@ -32,22 +32,25 @@ export const PageWelcome = () => {
 };
 
 export const attachPageWelcomeEvents = () => {
+
 	const stadtElem = document.getElementById("stadt") as HTMLSelectElement;
+	const waren1Element = document.getElementById("waren1") as HTMLHeadingElement;
+	const waren2Element = document.getElementById("waren2") as HTMLHeadingElement;
+	const waren3Element = document.getElementById("waren3") as HTMLHeadingElement;
+	const waren4Element = document.getElementById("waren4") as HTMLHeadingElement;
+	const waren5Element = document.getElementById("waren5") as HTMLHeadingElement;
 
 	stadtElem.addEventListener("change", () => {
+		const selectedCity = cities.find(
+			(city) => city.name === stadtElem.value
+		);
 
-		const city = stadtElem.value;
-		alert(city)
-		// const selectedCity = cities.find(
-		// 	(city) => city.name === selectElement.value
-		// );
-
-		// if (selectedCity) {
-		// 	waren1Element.textContent = selectedCity.waren[0];
-		// 	waren2Element.textContent = selectedCity.waren[1];
-		// 	waren3Element.textContent = selectedCity.waren[2];
-		// 	waren4Element.textContent = selectedCity.waren[3];
-		// 	waren5Element.textContent = selectedCity.waren[4];
-		// }
+		if (selectedCity) {
+			waren1Element.textContent = selectedCity.waren[0];
+			waren2Element.textContent = selectedCity.waren[1];
+			waren3Element.textContent = selectedCity.waren[2];
+			waren4Element.textContent = selectedCity.waren[3];
+			waren5Element.textContent = selectedCity.waren[4];
+		}
 	});
 };

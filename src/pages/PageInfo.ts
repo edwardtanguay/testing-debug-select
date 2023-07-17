@@ -47,27 +47,27 @@ export const PageInfo = () => {
 };
 
 export const attachPageInfoEvents = () => {
-  const selectElement = document.getElementById(
-    "stadtSelect"
-  ) as HTMLSelectElement;
-  const waren1Element = document.getElementById("waren1") as HTMLHeadingElement;
-  const waren2Element = document.getElementById("waren2") as HTMLHeadingElement;
-  const waren3Element = document.getElementById("waren3") as HTMLHeadingElement;
-  const waren4Element = document.getElementById("waren4") as HTMLHeadingElement;
-  const waren5Element = document.getElementById("waren5") as HTMLHeadingElement;
+  // const selectElement = document.getElementById(
+  //   "stadtSelect"
+  // ) as HTMLSelectElement;
+  // const waren1Element = document.getElementById("waren1") as HTMLHeadingElement;
+  // const waren2Element = document.getElementById("waren2") as HTMLHeadingElement;
+  // const waren3Element = document.getElementById("waren3") as HTMLHeadingElement;
+  // const waren4Element = document.getElementById("waren4") as HTMLHeadingElement;
+  // const waren5Element = document.getElementById("waren5") as HTMLHeadingElement;
 
-  // Event-Listener für die Auswahl der Stadt
-  selectElement.addEventListener("change", () => {
-    const selectedCity = cities.find(
-      (city) => city.name === selectElement.value
-    );
+  // // Event-Listener für die Auswahl der Stadt
+  // selectElement.addEventListener("change", () => {
+  //   const selectedCity = cities.find(
+  //     (city) => city.name === selectElement.value
+  //   );
 
-    if (selectedCity) {
-      waren1Element.textContent = selectedCity.waren[0];
-      waren2Element.textContent = selectedCity.waren[1];
-      waren3Element.textContent = selectedCity.waren[2];
-      waren4Element.textContent = selectedCity.waren[3];
-      waren5Element.textContent = selectedCity.waren[4];
-    }
-  });
+  //   if (selectedCity) {
+  //     waren1Element.textContent = selectedCity.waren[0];
+  //     waren2Element.textContent = selectedCity.waren[1];
+  //     waren3Element.textContent = selectedCity.waren[2];
+  //     waren4Element.textContent = selectedCity.waren[3];
+  //     waren5Element.textContent = selectedCity.waren[4];
+  //   }
+  // });
 };
